@@ -2,8 +2,11 @@
 Sets everything up
 """
 
-from config import TOKEN
+import os
+
+
 from commands import bot
 
+TOKEN = os.getenv('DISCORD_TOKEN')
 if __name__ == "__main__":
     bot.run(TOKEN)
